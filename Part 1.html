@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JS Question 1</title>
+<style type="text/css">
+ input[type=text] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  font-size: 20px;
+}
+
+label {
+	font-size: 20px;
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: center;
+  font-size: 20px;
+}
+
+
+
+</style>
+</head>
+<body>
+<div class="container" style="border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;">
+<form name="myForm"  onsubmit="return findReplace()" method="post">
+  <label for="enttext">Enter Text:</label>&nbsp;&nbsp;&nbsp;
+  <input type="text" id="enttext" name="enttext"><br><br>
+  <label for="word">Enter word to replace:</label>&nbsp;&nbsp;&nbsp;
+  <input type="text" id="word" name="word"><br><br>
+  <label for="replacedby">Enter word to replaced with:</label>&nbsp;&nbsp;&nbsp;
+  <input type="text" id="replacedby" name="replacedby"><br><br>
+  <input type="submit" value="Replace"><br>
+
+</form >
+<script type="text/javascript">
+  function findReplace() {
+  var x = document.forms["myForm"]["enttext"].value;
+  var y = document.forms["myForm"]["word"].value;
+  var z = document.forms["myForm"]["replacedby"].value;
+  newStr= x.replaceAll(y,z);
+  alert(newStr);
+  }
+
+  </script>
+  <div>
+</body>
+
+</html>
